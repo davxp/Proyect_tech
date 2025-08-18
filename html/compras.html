@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Compras</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <header>
+    <h1>Compras</h1>
+    <nav>
+      <a href="./admin.html">⬅ Volver</a>
+      <button id="btnLogout">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Nueva compra</h2>
+    <form id="formCompra">
+      <input type="number" id="client_id" placeholder="ID cliente">
+      <input type="number" id="created_by" placeholder="ID usuario (creador)">
+      <hr>
+      <div id="items"></div>
+      <button type="button" id="addItem">+ Agregar ítem</button>
+      <button type="submit">Registrar compra</button>
+    </form>
+    <p id="msg"></p>
+  </section>
+
+  <section>
+    <h2>Compras registradas</h2>
+    <table border="1">
+      <thead><tr><th>ID</th><th>Cliente</th><th>Total</th><th>Items</th><th>Acciones</th></tr></thead>
+      <tbody id="tabla"></tbody>
+    </table>
+  </section>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/compras.js"></script>
+</body>
+</html>

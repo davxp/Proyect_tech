@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Proveedores</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <header>
+    <h1>Proveedores</h1>
+    <nav>
+      <a href="./admin.html">⬅ Volver</a>
+      <button id="btnLogout">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <form id="form">
+    <input type="hidden" id="id">
+    <input type="text" id="company_name" placeholder="Empresa" required>
+    <input type="text" id="contact_name" placeholder="Contacto">
+    <input type="text" id="phone" placeholder="Teléfono">
+    <input type="email" id="email" placeholder="Correo">
+    <button type="submit">Guardar</button>
+  </form>
+
+  <table border="1">
+    <thead><tr><th>ID</th><th>Empresa</th><th>Contacto</th><th>Teléfono</th><th>Acciones</th></tr></thead>
+    <tbody id="tabla"></tbody>
+  </table>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/proveedores.js"></script>
+</body>
+</html>

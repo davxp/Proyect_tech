@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Usuario | Proyecto Tech</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <header>
+    <h1>Panel de Usuario</h1>
+    <nav>
+      <a href="./servicios.html">Ver servicios</a> |
+      <a href="./productos.html">Ver productos</a> |
+      <button id="btnLogout">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Mi perfil</h2>
+    <div id="perfil"></div>
+  </section>
+
+  <script src="../js/common.js"></script>
+  <script>
+    const u = requireAuth(); // cualquier logueado
+    document.getElementById("btnLogout").onclick = logout;
+
+    // Si manejas relación users->clients, aquí podrías cargar su client por id.
+    // Para demo, muestro lo básico del user en sesión.
+    const p = document.getElementById("perfil");
+    p.innerHTML = `
+      <p><strong>Nombre:</strong> ${u.name}</p>
+      <p><strong>Rol:</strong> ${u.role}</p>
+      <p><strong>ID:</strong> ${u.id}</p>
+    `;
+  </script>
+</body>
+</html>

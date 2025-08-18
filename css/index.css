@@ -1,0 +1,205 @@
+/* =====================
+   Estilos generales
+   ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #edf2f7, #ffffff);
+    color: #2D3748;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================
+   Header y navegación
+   ===================== */
+header {
+    background: #2A4365;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ECC94B;
+}
+
+/* =====================
+   Formularios (login, CRUD)
+   ===================== */
+form {
+    background: #ffffff;
+    max-width: 450px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    margin-bottom: 1rem;
+    color: #2A4365;
+    text-align: center;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.6rem 0;
+    border: 1px solid #CBD5E0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+form input:focus, form select:focus {
+    border-color: #38B2AC;
+    outline: none;
+}
+
+/* Botones */
+button {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+button.primary {
+    background: #38B2AC;
+    color: white;
+}
+
+button.primary:hover {
+    background: #319795;
+}
+
+button.danger {
+    background: #E53E3E;
+    color: white;
+}
+
+button.danger:hover {
+    background: #C53030;
+}
+
+/* =====================
+   Tablas (para CRUDs)
+   ===================== */
+table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: #2A4365;
+    color: white;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+tbody tr:hover {
+    background: #EDF2F7;
+}
+
+/* =====================
+   Layouts (Admin/User)
+   ===================== */
+.container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.sidebar {
+    width: 220px;
+    background: #2A4365;
+    color: white;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    height: 80vh;
+    position: sticky;
+    top: 1rem;
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+    color: #ECC94B;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 0.8rem 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 0.4rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* =====================
+   Responsivo
+   ===================== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+}

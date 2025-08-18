@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Admin | Proyecto Tech</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <header>
+    <h1>Panel de Administración</h1>
+    <nav>
+      <a href="./productos.html">Productos</a> |
+      <a href="./clientes.html">Clientes</a> |
+      <a href="./proveedores.html">Proveedores</a> |
+      <a href="./servicios.html">Servicios</a> |
+      <a href="./compras.html">Compras</a> |
+      <button id="btnLogout">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main>
+    <p>Bienvenido <span id="who"></span>. Desde aquí gestionas todo.</p>
+  </main>
+
+  <script src="../js/common.js"></script>
+  <script>
+    const u = requireAuth(["admin"]);
+    document.getElementById("who").textContent = u?.name || "";
+    document.getElementById("btnLogout").onclick = logout;
+  </script>
+</body>
+</html>
